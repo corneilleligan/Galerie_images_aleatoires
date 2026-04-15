@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Galerie d'Images Aléatoires</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+<header>
+  <h1>Galerie d'images aléatoires</h1>
+  <p>Chaque image est unique — cliquez pour agrandir</p>
+</header>
+
+<div class="controls">
+  <span class="count-label">Nombre d'images</span>
+  <select class="count-select" id="countSelect">
+    <option value="6">6</option>
+    <option value="9">9</option>
+    <option value="12" selected>12</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+  </select>
+  <button class="btn-regen" id="regenBtn">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M13.5 2.5A6.5 6.5 0 1 1 5 2.09"/>
+      <polyline points="1 1 5 2.09 3.91 6"/>
+    </svg>
+    Régénérer
+  </button>
+</div>
+
+<div class="gallery" id="gallery"></div>
+<p class="counter" id="counter"></p>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">&#x2715;</button>
+  <img id="lbImg" src="" alt="Aperçu"/>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
